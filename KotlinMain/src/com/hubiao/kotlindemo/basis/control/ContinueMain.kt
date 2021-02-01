@@ -1,23 +1,23 @@
-package com.hubiao.kotlindemo.basis.basistype
+package com.hubiao.kotlindemo.basis.control
 
-class BreakMain {
+class ContinueMain {
 }
 
 fun main() {
-    breakFunction()
+    continueFunction()
 }
 
-fun breakFunction() {
+fun continueFunction() {
     val a = arrayOf(1, 2, 3, 4, 5, 6, 7)
     val b = arrayOf("A", "B", "C", "E", "F", "G", "H")
 
-    loop1@for (i in a) {
+    loop1@ for (i in a) {
         println("i is $i start")
         for (j in b) {
             println("j is $j start")
 
             if ("B" == j) {
-                break@loop1
+                continue@loop1
             }
 
             println("j is $j end")
