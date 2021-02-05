@@ -1,4 +1,4 @@
-package com.hubiao.kotlindemo.basis.basistype
+package com.hubiao.kotlindemo.basis.basistype.collections
 
 class SetTestMain1 {
 }
