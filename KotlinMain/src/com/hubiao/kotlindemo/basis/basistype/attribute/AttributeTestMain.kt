@@ -16,14 +16,16 @@ class AttributeTestMain {
 
     val c
     get() = a
+
+    var d:String? = "D"
 }
 
 fun main() {
-    var attributeTestMain = AttributeTestMain()
+    val attributeTestMain = AttributeTestMain()
 
-    println("varValTestMain.a = ${attributeTestMain.a}, attributeTestMain.b = ${attributeTestMain.b}, attributeTestMain.c = ${attributeTestMain.c}")
+    println("In varValTestMain, a = ${attributeTestMain.a}, b = ${attributeTestMain.b}, c = ${attributeTestMain.c}, d.length = ${attributeTestMain.d?.length}")
 
     attributeTestMain.a = "Kotlin"
 
-    println("after change, attributeTestMain.a = ${attributeTestMain.a}, attributeTestMain.b = ${attributeTestMain.b}, attributeTestMain.c = ${attributeTestMain.c}")
+    println("after change, In varValTestMain, a = ${attributeTestMain.a}, b = ${attributeTestMain.b}, c = ${attributeTestMain.c}, d.length = ${attributeTestMain.d!!.length}")
 }
