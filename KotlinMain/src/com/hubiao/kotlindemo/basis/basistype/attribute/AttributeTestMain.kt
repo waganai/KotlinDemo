@@ -1,6 +1,8 @@
 package com.hubiao.kotlindemo.basis.basistype.attribute
 
-class VarValTestMain {
+const val const_test = "const_test"
+
+class AttributeTestMain {
     var a = "666"
         set(value) {
             field = "$value:$value"
@@ -11,14 +13,17 @@ class VarValTestMain {
         get() {
             return "$field:filed"
         }
+
+    val c
+    get() = a
 }
 
 fun main() {
-    var varTestMain = VarValTestMain()
+    var attributeTestMain = AttributeTestMain()
 
-    println("varTestMain.a = ${varTestMain.a}, varTestMain.b = ${varTestMain.b}")
+    println("varValTestMain.a = ${attributeTestMain.a}, attributeTestMain.b = ${attributeTestMain.b}, attributeTestMain.c = ${attributeTestMain.c}")
 
-    varTestMain.a = "Kotlin"
+    attributeTestMain.a = "Kotlin"
 
-    println("after change, varTestMain.a = ${varTestMain.a}, varTestMain.b = ${varTestMain.b}")
+    println("after change, attributeTestMain.a = ${attributeTestMain.a}, attributeTestMain.b = ${attributeTestMain.b}, attributeTestMain.c = ${attributeTestMain.c}")
 }
