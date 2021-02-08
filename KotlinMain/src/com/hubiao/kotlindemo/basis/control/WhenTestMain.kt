@@ -7,6 +7,9 @@ fun main() {
     whenFunction1(30)
 
     whenFunction2("Kotlin")
+
+    val str = "Kotlin"
+    println("$str is ${whenFunction3(str)}")
 }
 
 fun whenFunction1(var1: Int) {
@@ -66,5 +69,21 @@ fun whenFunction2(var1: Any) {
         else -> {
             println("$var1's type is other type")
         }
+    }
+}
+
+fun whenFunction3(any: Any?): String {
+    return when (any) {
+        null -> "Null"
+        is Byte -> "Byte"
+        is Short -> "Short"
+        is Int -> "Int"
+        is Long -> "Long"
+        is Float -> "Float"
+        is Double -> "Double"
+        is Char -> "Char"
+        is String -> "String"
+        else ->
+            "UnKnown"
     }
 }
