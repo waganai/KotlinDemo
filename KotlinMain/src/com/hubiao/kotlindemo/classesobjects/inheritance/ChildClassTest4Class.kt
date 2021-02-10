@@ -14,10 +14,12 @@ class ChildClassTest4Class : InterfaceTest1Class, InterfaceTest2Class {
     }
 
     override fun function3(arg1: String) {
+        // FIXME
         println("""ChildClass4TestClass.function3("$arg1")""")
     }
 
     override fun function1() {
+        // TODO
         println("""ChildClass4TestClass.function1()""")
     }
 }
