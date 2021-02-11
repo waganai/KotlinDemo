@@ -20,6 +20,21 @@ fun function1() {
     println("socialSecurityNumber = $socialSecurityNumber")
     println("hexBytes = $hexBytes")
     println("bytes = $bytes")
+
+    val byte1: Byte = 1
+    val short1: Short = 1
+    val int1: Int = 1
+    val long1: Long = 1L
+    val float1: Float = 0.1F
+    val double1: Double = 0.1
+
+    val num1 = byte1 + byte1
+    val bum2 = byte1 + short1
+    val num3 = byte1 + int1
+    val num4 = short1 + int1
+    val num5 = short1 + long1
+    val num6 = short1 + float1
+    val num7 = short1 + double1
 }
 
 fun function2() {
