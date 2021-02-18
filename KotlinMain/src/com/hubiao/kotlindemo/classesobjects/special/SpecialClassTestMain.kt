@@ -22,6 +22,17 @@ fun main() {
     val test7 = DataClassTestClass("Kotlin")
     test7.name = "Kotlin.1.4.1"
     test7.id = 666
+
+    val test8 = test7.copy()
+    val test9 = test7.copy(name = "name")
+
+    println("test8 = ${test8.toString()}")
+    println("test9 = ${test9.toString()}")
+
+    println("test7 == test8 = ${test7 == test8}")
+    println("test7 == test9 = ${test7 == test9}")
+    println("test7 === test8 = ${test7 === test8}")
+    println("test7 === test9 = ${test7 === test9}")
 }
 
 fun resolveEnumFunction1(enumType: Int) {
