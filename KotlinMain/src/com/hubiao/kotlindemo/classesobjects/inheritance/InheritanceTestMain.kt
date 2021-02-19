@@ -20,6 +20,10 @@ fun main() {
     inheritanceTestFunction1(test4, test4)
 
     test4.function4()
+
+    test4.name1 = "Kotlin"
+
+    println("test4.name1 = ${test4.name1}")
 }
 
 fun inheritanceTestFunction1(arg1: InterfaceTest2Class, arg2: InterfaceTest2Class) {
