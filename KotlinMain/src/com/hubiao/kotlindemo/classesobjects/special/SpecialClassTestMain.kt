@@ -33,6 +33,10 @@ fun main() {
     println("test7 == test9 = ${test7 == test9}")
     println("test7 === test8 = ${test7 === test8}")
     println("test7 === test9 = ${test7 === test9}")
+
+    val test10 = DataClassTest2Class("Kotlin", 233)
+    val(name1, id1) = test10
+    println("name1 = $name1, id1 = $id1")
 }
 
 fun resolveEnumFunction1(enumType: Int) {
