@@ -18,6 +18,8 @@ fun main() {
     val test4 = ChildClassTest4Class()
 
     inheritanceTestFunction1(test4, test4)
+
+    test4.function4()
 }
 
 fun inheritanceTestFunction1(arg1: InterfaceTest2Class, arg2: InterfaceTest2Class) {
