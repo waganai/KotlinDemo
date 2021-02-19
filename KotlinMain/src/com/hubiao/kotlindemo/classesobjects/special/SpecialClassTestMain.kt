@@ -4,6 +4,14 @@ class SpecialClassTestMain {
 }
 
 fun main() {
+    resolveEnumFunction2(EnumClassTestClass.Android)
+
+    resolveSealedFunction1(SealedClassTestClass.Android("Android"))
+
+    resolveSealedFunction2(SealedClassTest2Class.Kotlin("Kotlin"))
+}
+
+fun specialClassTestMainFunction1() {
     val test1 = NestedClassTestClass.NestedClassTest2Class()
     test1.name = "NestedClassTest2Class"
 
@@ -35,7 +43,7 @@ fun main() {
     println("test7 === test9 = ${test7 === test9}")
 
     val test10 = DataClassTest2Class("Kotlin", 233)
-    val(name1, id1) = test10
+    val (name1, id1) = test10
     println("name1 = $name1, id1 = $id1")
 }
 
@@ -50,7 +58,7 @@ fun resolveEnumFunction1(enumType: Int) {
         EnumClassTestClass.Android.ordinal -> {
             println(EnumClassTestClass.Android.name)
         }
-        else ->{
+        else -> {
             println("Other Type")
         }
     }
@@ -70,30 +78,37 @@ fun resolveEnumFunction2(enumClass: EnumClassTestClass) {
     }
 }
 
-fun resolveSealedFunction1(sealedClass :SealedClassTestClass) {
+fun resolveSealedFunction1(sealedClass: SealedClassTestClass) {
+    println("resolveSealedFunction1()")
     when (sealedClass) {
         is SealedClassTestClass.Java -> {
-
+            println("sealedClass is SealedClassTestClass.Java")
         }
         is SealedClassTestClass.Kotlin -> {
-
+            println("sealedClass is SealedClassTestClass.Kotlin")
         }
-
         is SealedClassTestClass.Android -> {
+            println("sealedClass is SealedClassTestClass.Android")
         }
     }
 }
 
-fun resolveSealedFunction2(sealedClass :SealedClassTest2Class) {
+fun resolveSealedFunction2(sealedClass: SealedClassTest2Class) {
+    println("resolveSealedFunction2()")
     when (sealedClass) {
         is SealedClassTest2Class.Java -> {
-
+            println("sealedClass is SealedClassTest2Class.Java")
         }
         is SealedClassTest2Class.Kotlin -> {
-
+            println("sealedClass is SealedClassTest2Class.Kotlin")
         }
 
         is SealedClassTest2Class.Android -> {
+            println("sealedClass is SealedClassTest2Class.Android")
+        }
+
+        else -> {
+            println("sealedClass is other")
         }
     }
 }
