@@ -4,6 +4,7 @@ class BreakMain {
 }
 
 fun main() {
+    println("test")
     breakFunction()
 }
 
